@@ -1,0 +1,220 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.logo {
+    position: absolute;
+    top: 50px; /* Adjust the position from the top */
+    left: 50px; /* Adjust the position from the left */
+    width: 100px; /* Set the width of the logo */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 3; /* Ensure the logo stays above the hero content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.hamburger-icon {
+    position: fixed;
+    z-index: 1000;
+    border-radius: 20px;
+    top: 30px;
+    right: 20px;
+    height: 70px;
+    transition: 0.5s;
+}
+
+.close-icon {
+    position: fixed;
+    z-index: 1000;
+    border-radius: 20px;
+    top: 28px;
+    right: 20px;
+    height: 60px;
+    transition: 0.5s;
+}
+
+.menu {
+    position: fixed;
+    top: 30px;
+    right: 100px;
+    background: rgba(156, 156, 156, 0.1); /* Semi-transparent background */
+    display: flex; /* Flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    z-index: 2;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    border-radius: 40px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 1px solid rgba(122, 122, 122, 0.3); /* Subtle border for contrast */
+}
+
+.menu.open {
+    display: flex; /* Display menu when open */
+    opacity: 1; /* Fully visible */
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    width: fit-content;
+    padding: 0 30px;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 500;
+    transform: translateX(-100%); /* Start off-screen */
+    animation: slideIn 0.5s ease forwards; /* Slide in */
+    animation-delay: 0.2s; /* Delay for animation */
+}
+
+.menu ul li:nth-child(1) a {
+    animation-delay: 0.1s; /* Delay for first item */
+}
+
+.menu ul li:nth-child(2) a {
+    animation-delay: 0.2s; /* Delay for second item */
+}
+
+.menu ul li:nth-child(3) a {
+    animation-delay: 0.3s; /* Delay for third item */
+}
+
+.menu ul li a:hover {
+    color: #f0a500;
+}
+
+@media (max-width: 1024px) {
+    .hamburger {
+        top: 40px;
+        right: 40px;
+        height: 70px;
+        width: 70px;
+    }
+    .hamburger .bar {
+        width: 40px;
+        height: 4px;
+    }
+    .logo {
+        top: 40px; /* Adjust the position from the top */
+        left: 40px; /* Adjust the position from the left */
+        width: 100px;
+    }
+    .menu ul li a {
+        font-size: 1.5rem;
+    }
+    .menu {
+        top: 50px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        top: 30px;
+        right: 30px;
+        height: 65px;
+        width: 65px;
+    }
+    .hamburger .bar {
+        width: 50px;
+        height: 5px;
+    }
+    .logo {
+        top: 30px; /* Adjust the position from the top */
+        left: 30px; /* Adjust the position from the left */
+        width: 90px;
+    }
+    .menu ul li a {
+        font-size: 1.3rem;
+    }
+    .menu {
+        top: 50px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hamburger {
+        top: 20px;
+        right: 20px;
+        height: 60px;
+        width: 60px;
+    }
+    .hamburger .bar {
+        width: 40px;
+        height: 4px;
+    }
+    .logo {
+        top: 20px; /* Adjust the position from the top */
+        left: 20px; /* Adjust the position from the left */
+        width: 80px;
+    }
+    .menu ul li a {
+        font-size: 1.2rem;
+    }
+    .menu {
+        top: 50px;
+        right: 20px;
+    }
+    .menu {
+        position: absolute;
+        top: 100px;
+        right: 20px;
+        width: 150px;
+        background: rgba(156, 156, 156, 0.1); /* Semi-transparent background */
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        opacity: 0; /* Hidden initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for contrast */
+    }
+}

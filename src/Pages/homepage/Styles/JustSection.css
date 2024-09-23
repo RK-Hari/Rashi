@@ -1,0 +1,207 @@
+.membershipholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.JSBackground{
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    border-radius: 20px;
+    max-height: 600px;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.justsectionContents{
+    padding:60px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+.JSheading1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: rgb(2, 2, 84);
+    font-size: 30px;
+    line-height: 1px;
+}
+.JSheading2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: rgb(20, 20, 20);
+    font-size: 70px;
+}
+.JSContent1{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    width: 500px;
+    color: rgb(60, 60, 60);
+}
+.JSContent2{
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 500;
+    width: 500px;
+    color: rgb(60, 60, 60);
+
+}
+.JSButton{
+    width: 150px;
+    margin-top: 30px;
+    height: 40px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.8rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+}
+.JSButton:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+.JSButton:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+.JSButton::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+.Atmcards{
+    margin-top: -50px;
+    margin-bottom: -120px;
+    margin-left: -50px;
+    width: 400px;
+    height: 600px;
+}
+@media (max-width: 1200px) {
+    .JSBackground{
+        padding: 20px;
+    }
+    .JSheading1{
+        margin-top: -50px;
+        font-size: 2.5rem;
+    }
+    .JSheading2{
+        font-size: 3.6rem;
+    }
+    .Atmcards{
+        display: none;
+        width: 800px;
+        z-index: 1000;
+    }
+    .justsectionContents{
+        margin-left: 20px;
+    }
+    .JSContent1{
+        font-size: 1rem;
+        max-width: 400px;
+    }
+    .JSContent2{
+        max-width: 400px;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .membershipholder{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .JSheading1{
+        font-size: 2.5rem;
+    }
+    .JSheading2{
+        margin-top: -60px;
+        font-size: 3.6rem;
+    }
+    .Atmcards{
+        display: none;
+        margin-left: 40px;
+        width: 400px;
+        z-index: 1000;
+    }
+    .justsectionContents{
+        margin-left: -10px;
+    }
+    .JSContent1{
+        font-size: 1rem;
+        max-width: 400px;
+    }
+    .JSContent2{
+        max-width: 400px;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .membershipholder{
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .JSheading1{
+        margin-top: 10px;
+        font-size: 2rem;
+    }
+    .JSheading2{
+        margin-top: -50px;
+        font-size: 2.5rem;
+    }
+    .justSectionImage{
+    }
+    .Atmcards{
+        width: 290px;
+        z-index: 1000;
+    }
+    .justsectionContents{
+        margin-left: -10px;
+    }
+    .JSContent1{
+        font-size: 1rem;
+        max-width: 300px;
+    }
+    .JSContent2{
+        max-width: 300px;
+        font-size: 1rem;
+    }
+}

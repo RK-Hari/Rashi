@@ -1,0 +1,225 @@
+/* General Styles for larger screens (default) */
+.pictureComponent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgb(240, 240, 240);
+  padding-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pictureComponent-header {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  margin: 0 auto 5px auto;
+  color: #165b9d;
+}
+
+.picture-sub-1,
+.picture-sub-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.picturecomponent-img1,
+.picturecomponent-img2,
+.picturecomponent-img3 {
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.picturecomponent-img1 {
+  height: 230px;
+  width: 300px;
+}
+
+.picturecomponent-img2 {
+  height: 230px;
+  width: 180px;
+}
+
+.picturecomponent-img3 {
+  height: 230px;
+  width: 425px;
+}
+
+.pictureComponent-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
+  align-items: center;
+}
+
+.pictureComponent-sub1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.pictureComponent-content-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: rgb(17, 55, 107);
+}
+
+.pictureComponent-content button {
+  width: 250px;
+  margin-top: 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  font-size: 15px;
+  outline: none;
+  overflow: hidden;
+}
+
+.pictureComponent-content button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.pictureComponent-content svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.pictureComponent-logo1 {
+  height: 50px;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+  .pictureComponent-header {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .picture-sub-1,
+  .picture-sub-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .picturecomponent-img1,
+  .picturecomponent-img2,
+  .picturecomponent-img3 {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .pictureComponent-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pictureComponent-content-text {
+    font-size: 24px;
+  }
+
+  .pictureComponent-content button {
+    width: 220px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .pictureComponent-header {
+    font-size: 28px;
+  }
+
+  .pictureComponent-container {
+    padding: 10px;
+  }
+
+  .picturecomponent-img1,
+  .picturecomponent-img2,
+  .picturecomponent-img3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .pictureComponent-content-text {
+    font-size: 20px;
+  }
+
+  .pictureComponent-content button {
+    width: 200px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive styles for small mobile devices */
+@media (max-width: 480px) {
+  .pictureComponent-header {
+    font-size: 22px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .picture-sub-1,
+  .picture-sub-2 {
+    gap: 5px;
+  }
+
+  .picturecomponent-img1,
+  .picturecomponent-img2,
+  .picturecomponent-img3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .pictureComponent-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pictureComponent-content-text {
+    font-size: 18px;
+  }
+
+  .pictureComponent-content button {
+    width: 180px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.counter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add padding to create spacing on smaller screens */
+    cursor: pointer;
+}
+
+.counter-box {
+    margin-top: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 1500px; /* Set a maximum width for larger screens */
+    background-color: rgb(240, 240, 240);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.Counter-content-box {
+    margin: 10px 50px; /* Reduce margin to ensure flexibility */
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 200px; /* Allow each box to take up equal space and wrap */
+}
+
+/* Font styles */
+.h1-blue, .h1-green, .h1-orange, .h1-yellow {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px; /* Slightly reduced base size */
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    line-height: 30px;
+}
+
+.h1-blue {
+    color: rgb(0, 0, 0);
+}
+
+.h1-green {
+    color: rgb(0, 0, 0);
+}
+
+.h1-orange {
+    color: rgb(0, 0, 0);
+}
+
+.h1-yellow {
+    color: rgb(0, 0, 0);
+}
+.h1-blue:hover {
+    color: #007bff; /* Modern blue color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    letter-spacing: 1.5px; /* Adds slight spacing between letters */
+}
+
+.h1-green:hover {
+    color: #28a745; /* Modern green color */
+    transform: scale(1.05);
+    letter-spacing: 1.5px;
+}
+
+.h1-orange:hover {
+    color: #fd7e14; /* Modern orange color */
+    transform: scale(1.05);
+    letter-spacing: 1.5px;
+}
+
+.h1-yellow:hover {
+    color: #ffc107; /* Modern yellow color */
+    transform: scale(1.05);
+    letter-spacing: 1.5px;
+}
+
+.h2-subhead {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-top: -10px;
+    font-weight: 600;
+    color: rgb(108, 108, 108);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.h2-subhead:hover {
+    color: #6c63ff; /* Modern purple color on hover */
+    transform: translateY(-5px); /* Moves slightly upwards */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+@media (max-width: 1024px) {
+    .counter-box {
+        height: auto; /* Allow the height to adjust dynamically */
+    }
+
+    .Counter-content-box {
+        margin: 5px 10px; /* Reduce side margins */
+        height: auto; /* Let the height adjust based on content */
+    }
+
+    .h1-blue, .h1-green, .h1-orange, .h1-yellow {
+        font-size: 2rem; /* Slightly reduce font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .counter-box {
+        /* padding: 20px; */
+        height: auto;
+    }
+
+    .Counter-content-box {
+        flex-basis: 45%; /* Allow two boxes in a row */
+        margin: 10px 10px;
+        text-align: center;
+    }
+
+    .h1-blue, .h1-green, .h1-orange, .h1-yellow {
+        font-size: 2rem; /* Reduce font size further */
+    }
+}
+@media (max-width: 480px) {
+    .counter-box {
+        padding: 10px;
+    }
+
+    .Counter-content-box {
+        flex-basis: 45%; /* Two boxes in a row for mobile */
+        margin: 10px 5px; /* Reduce margins for better fit */
+        height: auto;
+        text-align: center;
+    }
+
+    .h1-blue, .h1-green, .h1-orange, .h1-yellow {
+        font-size: 2rem; /* Further reduce font size for readability */
+    }
+    .h2-subhead{
+        font-size: 1rem;
+        color: rgb(45, 45, 45);
+    }
+}

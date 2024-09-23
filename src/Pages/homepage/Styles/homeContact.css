@@ -1,0 +1,267 @@
+.home-contact-container{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.homecontact-image1{
+   height: 500px;
+   width: 600px;
+   border-radius: 50px;
+}
+
+.home-contact-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    line-height: 25px;
+}
+
+.home-contact-button{
+  display: flex;
+  justify-content: center;
+}
+
+.home-contact-content input {
+    width: 400px;
+    height: 45px;
+    padding: 0 16px;
+    background: white;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #fe4567;
+    color: black;
+    animation: shake_541 0.14s 3;
+}
+  
+.home-contact-content input:valid {
+    border-color: black;
+    animation: none;
+}
+
+.home-contact-content textarea {
+    width: 410px;
+    padding: 10px 10px;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    border: 2px solid #fe4567;
+    color: black;
+    animation: shake_541 0.14s 3;
+}
+  
+.home-contact-content textarea:valid {
+    border-color: black;
+    animation: none;
+}
+  
+  @keyframes shake_541 {
+    0%, 100% {
+      translate: 0;
+    }
+  
+    25% {
+      translate: 8px 0;
+    }
+  
+    75% {
+      translate: -8px 0;
+    }
+  }
+
+.home-contact-content button {
+    width: 400px;
+    margin-top: 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  
+  .home-contact-content svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .home-contact-content button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .home-contact-content button:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .home-contact-content button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .home-contact-content button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+
+  .home-contact-header-2{
+    font-weight: 200;
+  }
+
+  .home-contact-header{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  /* Updated Responsive Styles */
+
+/* For laptops and smaller desktops */
+@media (max-width: 1200px) {
+  .homecontact-image1 {
+    height: 400px;
+    width: 350px;
+    display: block;
+  }
+
+  .home-contact-content input, 
+  .home-contact-content textarea, 
+  .home-contact-content button {
+    width: 350px;
+  }
+
+  .home-contact-content button {
+    height: 40px;
+  }
+}
+
+/* For tablets like iPads */
+@media (max-width: 1024px) {
+  .homecontact-image1 {
+    height: 300px;
+    width: 250px;
+  }
+
+  .home-contact-content input, 
+  .home-contact-content textarea, 
+  .home-contact-content button {
+    width: 100%;
+  }
+
+  .home-contact-content button {
+    height: 38px;
+  }
+}
+
+/* For large mobile devices */
+@media (max-width: 768px) {
+  .home-contact-container {
+    padding: 8px;
+  }
+
+  .homecontact-image1 {
+    display: none;
+  }
+
+  .home-contact-content input, 
+  .home-contact-content textarea, 
+  .home-contact-content button {
+    width: 100%;
+  }
+
+  .home-contact-content button {
+    height: 36px;
+  }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 600px) {
+  .home-contact-container {
+    gap: 10px;
+  }
+
+  .homecontact-image1 {
+    display: none;
+  }
+
+  .home-contact-content input, 
+  .home-contact-content textarea, 
+  .home-contact-content button {
+    width: 100%;
+  }
+
+  .home-contact-content button {
+    height: 34px;
+  }
+}
+
+/* For very small screens like phones */
+@media (max-width: 480px) {
+  .home-contact-container {
+    gap: 8px;
+    padding-left: 30px;
+  }
+
+  .homecontact-image1 {
+    display: none;
+  }
+
+  .home-contact-content input{
+    width: 350px;
+  }
+
+  .home-contact-content textarea{
+    width: 360px;
+  }
+ 
+  .home-contact-content button {
+    height: 35px;
+  }
+
+  .home-contact-header {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,170 @@
+.Resort-Container{
+    overflow: hidden;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Resort-Container::-webkit-scrollbar {
+    display: none;
+}
+
+.Heading-placer{
+    margin-left: 100px;
+    display: flex;
+    align-items: start;
+}
+.Heading{
+    font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+    color: #165b9d;
+}
+.card-container{
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 20px;
+    margin-top: 20px;
+    justify-content: center;
+
+    flex-direction: row;
+    gap: 50px;
+}
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Internet Explorer and Edge */
+.card-container {
+    -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+.ResortCard{
+    min-width: 200px; /* Set a minimum width for each card */
+    background-color: rgb(221, 170, 0);
+    border-radius: 20px;
+}
+.ResortCard2{
+    min-width: 200px; /* Set a minimum width for each card */
+    background-color: rgb(47, 90, 0);
+    border-radius: 20px;
+}
+.ResortCard3{
+    min-width: 200px; /* Set a minimum width for each card */
+    background-color: rgb(0, 79, 124);
+    border-radius: 20px;
+}
+.ResortCard4{
+    min-width: 200px; /* Set a minimum width for each card */
+    background-color: rgb(212, 0, 21);
+    border-radius: 20px;
+}
+.ResortCard, .ResortCard2, .ResortCard3, .ResortCard4 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.ResortCard:hover, .ResortCard2:hover, .ResortCard3:hover, .ResortCard4:hover {
+    transform: translateY(-10px); /* Slightly lift the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    cursor: pointer; /* Change the cursor to indicate interactivity */
+}
+.resortimg1{
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+}
+.resortimg1{
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+}
+.resortimg1{
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+}
+.resortimg1,.resortimg2,.resortimg3,.resortimg4{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.Card-content {
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    text-align: center; /* Center-align the text */
+    justify-content: left;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  
+  .Card-title {
+    font-size: 1.5rem; /* Adjust size for title */
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff; /* A dark color for better contrast */
+  }
+  
+  .Card-location {
+    font-size: 1rem; /* Slightly smaller font for the location */
+    margin-top: 5px;
+    color: #000000; /* A lighter shade for location */
+    font-weight: bolder;
+  }
+
+
+    @media (max-width: 1024px) {
+
+        .card-container{
+            margin-left: 70px;
+        }
+        .Heading{
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-left: -80px;
+            color: rgb(0, 0, 118);
+        }
+        .ResortCard{
+            padding-right: 30px;
+            margin-right: 20px;
+        }
+        
+        .ResortCard2{
+            margin-right: 20px;
+        }
+        .ResortCard3{
+            margin-right: 20px;
+        }
+    }   
+    @media (max-width: 480px) {
+
+        .card-container{
+
+            margin-left: -10px;
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+        }
+        .Heading{
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-left: -80px;
+            color: rgb(0, 0, 118);
+        }
+        .ResortCard{
+            margin-right: 40px;
+        }
+        .ResortCard2{
+            margin-right: 40px;
+        }
+        .ResortCard3{
+            margin-right: 40px;
+        }
+    }   
